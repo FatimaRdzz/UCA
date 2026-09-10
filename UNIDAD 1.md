@@ -32,6 +32,11 @@ Nodo 1:
 - Lavadora inteligente
 - servidor 
 
+(Direcciones)
+- Ipv4
+- MAC
+- IP6
+
 (Etheinel)
 
 Nodo 2: 
@@ -51,7 +56,14 @@ Nodo 3:
 - switch
 - router
 
-(Wifi y bluethoot)
+(Wifi)
+- 5Mh2
+- 3.5 gbps
+- 2.4 Mhz
+- 500 mbps
+
+(bluethoot)
+.
 
 Nodo 4:
 - Celular
