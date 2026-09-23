@@ -19,10 +19,18 @@ Caracteristicas: El acceso se hace a traves de uno o más puntos de acceso (AP) 
 ### CAN
 COnecta varias LAN de distintos edificios que pertenecen a la misma organizaciony estan proximos entre sí
 
-Caracteristicas:los edificios suelen entrelazarse con fibra optica para soportar mayor distancia y tráfico; toda la red sigue bajo una sola a
-$$
-inistración
-$$
+Caracteristicas:los edificios suelen entrelazarse con fibra optica para soportar mayor distancia y tráfico; toda la red sigue bajo una sola aministracion
+
+### Red de area amplia (WAN)
+Conecta redes que estan geograficamente distantes a veces en distintas ciudades, paises o contienentes
+
+Caracteristicas: Ya no se aministra una sola organización: suele depender de proveedores de telecomunicaciones, y su costo y latencia son mayores que una LAN
+
+### Comparación por alcance (de menor a mayor cobertura)
+- PAN( Una persona)
+- LAN/WLAN (un edificio)
+- Campus area network (varios edificios de una organización)
+- WAN (ciudades o paises)
 
 
-
+![[Pasted image 20260922200523.png]]
