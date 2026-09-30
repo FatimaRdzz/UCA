@@ -33,4 +33,27 @@ Caracteristicas: Ya no se aministra una sola organización: suele depender de pr
 - WAN (ciudades o paises)
 
 
-![[Pasted image 20260922200523.png]]
+![[Pasted image 20260922200523.png]] 
+### Trabajo 2.2  
+                  Velocidad  -> Año  -> Frecuencia
+802.11. a  -> wifi 2 ->  54 Mbps  ->  1999  -> 5G
+802.11.n -> wifi 4 ->  600Mbps   ->  2009  ->2.4Ghz
+802.11.ac -> wifi 5 -> 3.5Mbps  ->  2013
+802.11.b -> wifi 1 ->   11Mbps    -> 1999  -> 2.4Ghz
+802.11.g  -> wifi 3 -> 96Mbps    ->   2014 
+802.11.sx -> wifi 6  - >9.6 Mbps ->2016
+
+### Internet
+es la red de redes: millones de WAN, LAN y redes de proveedores distintos, interconectadas y funcionando bajo un mismo conjunto de protocolos
+
+Ninguna empresa ni gobierno aministra internet como un todo; cada red que la compone es anistrada de foma independiente y se conecta a las demás por acuedo  mutuo
+
+### que es TCP/IP?
+es un protocolo que tiene que seguir la red
+
+¿Como se conectan las redes?
+A traves de proveedores de servicios de internet (ISP), organizados en niveles: los ISP locales se conectan a otros más grandes, y estos entre sí, hasta formar una red global
+
+Puntos de intercambos (IXP) sitios fisicos donde distintos ISP conectan su trafico directamente entre sí, en lugar de enviarlo por una ruta más larga. Reducen latencia y costo de trafico
+
+Los IXP crean rutas más cortas para 
