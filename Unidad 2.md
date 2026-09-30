@@ -56,4 +56,4 @@ A traves de proveedores de servicios de internet (ISP), organizados en niveles: 
 
 Puntos de intercambos (IXP) sitios fisicos donde distintos ISP conectan su trafico directamente entre sí, en lugar de enviarlo por una ruta más larga. Reducen latencia y costo de trafico
 
-Los IXP crean rutas más cortas para 
+Los IXP crean rutas más cortas para el trafico de internet
