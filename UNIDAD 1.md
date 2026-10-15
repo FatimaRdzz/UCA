@@ -114,33 +114,24 @@ Conceptos Clave
 
 ## 4 Características que deben tener las redes hoy en dia
 
-Tolerancia a fallas:
-Es la capacidad de una red para seguir operando cuando falla un enlace o un dispositivo , sin que la comunicación se detenga por completo. Esto no significa que se rompa si no para que soporte después de caerse.
+Tolerancia a fallas: Es la capacidad de una red para seguir operando cuando falla un enlace o un dispositivo , sin que la comunicación se detenga por completo. 
 
-Estabilidad en el software:
-Es la capacidad de una red para crecer (mas usuarios , mas dispositivos , mas servicios) sin tener que rediseñarla desde cero cada vez que crece
+Estabilidad en el software: Es la capacidad de una red para crecer (mas usuarios , mas dispositivos , mas servicios) 
 
-Calidad de servicio (QoS):
-La calidad de servicio , o QoS es el conjunto de mecanismos que decide que trafico se atiende primero cuando la red no tiene capacidad suficiente para todo al mismo tiempo, es unos paqutes pero se clasifica para dar proridad
+Calidad de servicio:La calidad de servicio, es el conjunto de mecanismos que decide que trafico se atiende primero cuando la red no tiene capacidad suficiente para todo al mismo tiempo
 
-Seguridad:
-Se refiere a proteger la red y la información que circula por ella contra accesos , modificaciones o interrupciones no autorizadas
+Seguridad: Se refiere a proteger la red y la información que circula por ella contra accesos o interrupciones no autorizadas
 
 Ataques mas comunes 
 
 -Suplantacion de MAC/IP (Spoofing)
 -Ataque de intermediario (man-in-the-middle)
--Denegacion de servicio (DoS / DDoS)
 -Acceso no autorizado a un punto de acceso inalambrico
 -Pishing e ingenieria social
 
-Arquitectura de redes
+Arquitectura de redes: Una arquitectura de red es el conjunto de reglas y decisiones de diseño que definen como se organiza una red para que la comunicacion funcione
 
-Una arquitectura de red es el conjunto de reglas y decisiones de diseño que definen como se organiza una red para que la comunicacion funcione: que una funcion cumple cada parte , en que orden se procesan los datos y que tienen el control sobre que.
-
-Modelos de referencia 
-
-Una red se diseña dividiendola en capas independientes , donde cada capa resuelve un problema especifico 
+Modelos de referencia: Una red se diseña divido en capas independientes, donde cada capa resuelve un problema especifico 
 
  Modelo OSI 
 
@@ -154,67 +145,64 @@ Una red se diseña dividiendola en capas independientes , donde cada capa resuel
 
 Modelo TCP/IP
 
--Aplicación
-Genera el mensaje (HTTP, DNS, correo...)
+Aplicación
+Genera el mensaje (HTTP, DNS, correo.)
 La aplicación genera el mensaje original: por ejemplo, el cuerpo de una petición HTTP o un correo. Todavía no lleva ningún encabezado de red.
 
--Transporte
-Divide y numera segmentos (TCP/UDP
+Transporte
+Divide y numera segmentos (TCP/UDP)
 La capa de transporte agrega su encabezado: define el puerto de origen y destino, y numera el segmento para poder reordenarlo después.
 
--Internet
+Internet
 Agrega direcciones IP de origen y destino
 La capa de internet agrega su encabezado: incluye la dirección IP de origen y de destino, la información que usará el router para decidir la ruta.
 
--Acceso a la red
+Acceso a la red
 Agrega direcciones MAC y transmite como señal
 La capa de acceso a la red agrega su encabezado: incluye la dirección MAC del siguiente salto y prepara los datos para convertirse en señal.
 
--Acceso a la red
+Acceso a la red
 Agrega direcciones MAC y transmite como señal
 El paquete viaja por el medio físico —cable, fibra u ondas de radio— y llega a la capa de acceso a la red del receptor, todavía completamente encapsulado.
 
--Internet
+Internet
 Agrega direcciones IP de origen y destino. La capa de acceso a la red del receptor retira su encabezado y entrega el resto hacia arriba
 
--Transporte
+Transporte
 Divide y numera segmentos (TCP/UDP) La capa de internet del receptor retira su encabezado y lo entrega a la capa de transporte, que usará el número de puerto para identificar la aplicación correcta.
 
--Aplicación
+Aplicación
 Genera el mensaje (HTTP, DNS, correo. La capa de transporte del receptor retira su encabezado. La aplicación recibe el mensaje original intacto: exactamente el mismo dato con el que empezamos en el emisor.
 
--Encapsulamiento
+Encapsulamiento
 Al bajar por las capas , cada una envuelve el dato con su propio encabezado ; al llegar al destino , el proceso se invierte y cada retira el encabezado que le corresponde
 
 
-###Actividad 1.5
+### Actividad 1.5
 
-### Arquitectura client - Servidor
+Arquitectura client - Servidor
 Que es?
 Modelo de red donde las tareas se dividen entre los proveedores de recursos o servicios (servidores) y los demandantes (clientes). El cliente envía una petición y el servidor central responde
 
-Pautas
--Estructura centralizada: El servidor gestiona los datos, la lógica de negocio y los permisos.
+Pauta: El servidor gestiona los datos, la lógica de negocio y los permisos.
 
- Escalabilidad vertical: Para mejorar el rendimiento suele requerirse aumentar la capacidad del servidor.
+ Escalabilidad vertical: Para mejorr el rendimiento suele requerirse aumentar la capacidad del servidor
 
-###P2P
+### P2P
 
-Que es?
-Red descentralizada donde cada participante (nodo o par) actúa simultáneamente como cliente y servidor, compartiendo recursos directamente sin pasar por un equipo centra
+Que es? Red descentralizada donde cada participante actúa simultáneamente como cliente y servidor, compartiendo recursos directamente sin pasar por un equipo central
 
 Pautas
-- Estructura descentralizada: No existe una entidad central que valide o controle las conexiones.
+- No existe una entidad central que valide o controle las conexiones.
 
-- Resiliencia: La red sigue funcionando aunque se desconecten varios nodos.
+-La red sigue funcionando aunque se desconecten varios nodos.
 
 
-###Blochchain
+### Blochchain
 
-Que es?
-Registro digital compartido e inmutable formado por una cadena de bloques de datos protegidos criptográficamente, distribuido a través de una red P2P
+¿Qué es?
+Registro compartido e inmutable formado por una cadena de bloques de datos protegidos criptográficamente distribuido a través de una red P2P
 
-Pautas
-- Inmutabilidad: Una vez registrado un bloque, la información no se puede modificar ni borrar sin alterar el resto de la cadena.
-
--Mecanismos de consenso: Los nodos validan las transacciones mediante reglas acordadas (como Proof of Work o Proof of Stake) antes de agregarlas.
+- La información no se almacena en un solo servidor central. Se distribuye en una red de computadoras llamadas **nodos**, donde cada una guarda una copia exacta del registro. 
+- Inmutabilidad: Una vez que un dato o bloque se escribe en la cadena, no se puede borrar ni modificar. Para alterar un registro del pasado, se tendría que hackear simultáneamente a más de la mitad de los nodos de la red, lo que es computacionalmente inviable.
+- Criptografía:Cada bloque de información se asegura mediante un código alfanumérico único llamado hash
