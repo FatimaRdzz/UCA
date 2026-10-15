@@ -180,8 +180,9 @@ Al bajar por las capas , cada una envuelve el dato con su propio encabezado ; al
 
 ### Actividad 1.5
 
-Arquitectura client - Servidor
-Que es?
+Arquitectura client  Servidor
+
+¿Qué es?
 Modelo de red donde las tareas se dividen entre los proveedores de recursos o servicios (servidores) y los demandantes (clientes). El cliente envía una petición y el servidor central responde
 
 Pauta: El servidor gestiona los datos, la lógica de negocio y los permisos.
@@ -196,7 +197,6 @@ Pautas
 - No existe una entidad central que valide o controle las conexiones.
 
 -La red sigue funcionando aunque se desconecten varios nodos.
-
 
 ### Blochchain
 
