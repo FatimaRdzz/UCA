@@ -99,4 +99,44 @@ El protocolo ARP permite descubrir la dirección MAC de un dispositivo a partir 
 ==🔵¿Por que los puntos de intercambio reducen la latencia?==
 porque permiten que las redes intercambien tráfico de forma mas directa ya que se elimina largas distancias geográficas
 
+==Campo 1==
+Dato de ejemplo: 10101010 10101010 10101010 10101010 10101010 10101010 10101010 10101011 (8 bytes)
 
+Nombre del campo: Padding (o relleno)
+
+Para qué sirve: Sirve para completar el tamaño requerido de un bloque de datos o una estructura cifrada cuando la información original no alcanza los bytes necesarios. También se utiliza en redes para sincronización o para asegurar que los datos cumplan con una longitud estándar antes de ser procesados por un algoritmo
+
+==🟣Campo 2==
+Dato de ejemplo: FFFF.FFFF.FFFF (6 bytes)
+
+Nombre del campo: Dirección MAC de destino (Destination MAC Address)
+
+Para qué sirve: Sirve para enviar un mensaje a todos los dispositivos que se encuentran dentro de la misma red local para que todos la reciban y procesen
+
+==🔴Campo 3==
+Dato de ejemplo: 0001.4321.ABCD (6 bytes)
+
+Nombre del campo: Dirección MAC de origen (Source MAC Address)
+
+Para qué sirve: Identifica de manera única al dispositivo que está enviando la trama. Permite que el receptor sepa qn le mandó los datos y sepa a dónde responder
+
+==🔵Campo 4==
+Dato de ejemplo: 0x0806 (2 bytes)
+
+Nombre del campo: Tipo / EtherType
+
+Para qué sirve: Indica q protocolo de capa superior viene encapsulado dentro de la carga útil de la trama Ethernet. Esto ayuda al receptor a saber cómo procesar los datos que trae el paquete
+
+==🟢Campo 5==
+Dato de ejemplo: ¿Quién tiene la IP 192.168.1.2? Responde a 192.168.1.1 (entre 46 y 1500 bytes)
+
+Nombre del campo: Datos / Carga útil (Payload / ARP Request)
+
+Para qué sirve: Contiene la información que transporta la trama. En este caso una trama ARP, lleva la petición en texto preguntando qué dispositivo físico (MAC) corresponde a una determinada dirección IP dentro de la red local
+
+==🔵Campo 6==
+Dato de ejemplo: 0x3A7F91C2 (4 bytes)
+
+Nombre del campo: FCS (Frame Check Sequence) / Código de redundancia cíclica (CRC)
+
+Para qué sirve: Es un valor de verificación de errores de 4 bytes que se coloca al final de la trama Ethernet. Sirve para comprobar que los datos no se hayan corrompido o alterado durante la transmisión por el medio físico
