@@ -140,3 +140,110 @@ Dato de ejemplo: 0x3A7F91C2 (4 bytes)
 Nombre del campo: FCS (Frame Check Sequence) / Código de redundancia cíclica (CRC)
 
 Para qué sirve: Es un valor de verificación de errores de 4 bytes que se coloca al final de la trama Ethernet. Sirve para comprobar que los datos no se hayan corrompido o alterado durante la transmisión por el medio físico
+
+---
+Switch de capa 3
+
+Además de conmutar por MAC, puede enrutar usando la dirección IP del paquete y su tabla de rutas, y conecta varias redes o VLAN entre sí.
+
+Capa 2 frente a сара 3
+
+Capa 2: lee la MAC, trabaja en una sola red, necesita un router para comunicar redes distintas y cuesta menos.
+
+Capa 3: lee MAC e IP, conecta varias redes o VLAN, enruta por sí mismo y a alta velocidad, y cuesta más,
+
+Ejemplo: de una red a otra
+
+Un equipo de la red 192.168.1.0/24 quiere hablar con la 192.168.2.0/24. Con un switch de capa 2 hace falta un router; un switch de capa 3 mira la IP de destino y crea una trama nueva hacia la otra red
+
+Reemplaza a un router?
+
+No del todo: el router sigue siendo mejor para conectar con el exterior (WAN, Internet) y para funciones como NAT. El switch de capa 3 se usa en campus y centros de datos para enrutar entre VLAN a alta velocidad
+
+### Fibra Óptica
+
+
+Estructura MAC
+Es un cable de vidrio o plástico muy delgado que transmite los datos como pulsos de luz en lugar de señales eléctricas
+
+Es un cable de vidrio o plástico muy delgado que transmite los datos como pulsos de luz en lugar de señales eléctricas
+
+La luz viaja por el núcleo y rebota en sus paredes por reflexión total interna, porque el revestimiento que lo rodea desvia la luz de vuelta hacia adentro
+
+De adentro hacia afuera: el núcleo, que conduce la luz; el revestimiento, que la mantiene dentro; el recubrimiento, que protege el vidrio; y la cubierta exterior
+
+Componentes de un enlace de fibra
+
+Se necesita el cable de fibra con conectores en sus extremos y un transceptor (SFP) que convierte la señal eléctrica en luz; un convertidor de medios une equipos de cobre con la fibra.
+
+Petch
+
+Transceptores (SFP)
+
+Es un módulo intercambiable que se inserta en el puerto del switch o router y convierte la señal eléctrica en luz y la luz en señal eléctrica; se elige según el tipo de fibra, la distancia y la velocidad
+
+Tipos de transceptores
+
+Por velocidad: SFP 1 Gbps, SFP+ 10 Gbps, SFP28 25 Gbps, QSFP+ 40 Gbps y QSFP28 100 Gbps.
+
+Por fibra: SX para multimodo y LX para monomodo
+
+Ventajas de la fibra óptica
+
+Ofrece mucho ancho de banda, llega a mayores distancias, es inmune a la interferencia electromagnética y es más difícil de intervenir sin ser detectado
+
+Desventajas de la fibra óptica
+
+Los equipos y conectores cuestan más, la instalación y los empalmes requieren herramientas especializadas, y el cable es frágil si se dobla demasiado
+
+Dónde se usa la fibra óptica
+
+En el backbone de Internet, en los cables submarinos, en los enlaces entre edificios de un campus y en los centros de datos
+
+UTP frente a fibra óptica
+
+UTP: señal eléctrica, hasta 100 m, económico, sensible a la interferencia.
+
+Fibra: pulsos de luz, desde cientos de metros hasta decenas de kilómetros, más costosa, inmune a la interferencia
+### Dirección MAC
+LA dirección MAC es la identificación de 48 bits que tiene cada tarjeta red y que sirve para identificar el origen del destino de una trama dentro de la LAN (capa 2)
+
+### Para qué sirve la MAC
+Los switches usan la MAC, para decidir porque puerto reenviar cada trama y construyen su tabal de direcciones aprendiendo la MAC de origen
+
+### Estructura de la MAC
+Los primeros 24 bits  (OUI) identifican el fabricante y los ultimos 
+
+### La MAC puede cambiar
+
+Viene grabada de fábrica en 
+
+### Unicast, multicast y broadcast 
+Según a cuántos equipos va dirigida, una comunicación puede ser unicast (a uno), multicast (a un grupo) o broadcast (a todos).
+
+### Unicast: de uno a uno
+
+La trama va a un solo destinatario, identificado por su MAC específica, es el tipo de tráfico más común, como abrir una página web o copiar un archivo
+
+### Unicast en el switch
+El switch busca la MAC de destino en su tabla de direcciones y envía la trama solo por el puerto donde está ese equipo; si no la conoce, la inunda por todos los puertos
+
+### Multicast: de uno a un grupo
+La trama de grupo de equipos que se unieron a él; los démas la ignoran. EN IPv4 usa direcciones 224.0.0.0 a 239.255.255 y MAC que empiezan con 01:00:5E
+
+### broadcast: de uno a todo
+La tarma llega a todos los equipos de la red, con MAC de destino FF:FF:FF:FF:FF:FF; todos la reciben y la procesan
+
+### Para que sirve el unicast
+
+
+
+
+
+
+
+
+
+
+
+![[Pasted image 20261105154811.png]]
