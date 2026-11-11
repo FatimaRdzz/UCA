@@ -83,7 +83,7 @@ La codificación convierte los bits en un patrón predefinido que facilita la si
 ### Medios fisicos: conexion de la comunicación 
 Un dispositivo se conecta mediante su tarjeta de red (NIC), un puerto, un conector y el medio; la NIC convierte los bits en la señal que el medio puede transportar
 
-### Ethernet capa 1 y 2
+==🔴 ### Ethernet capa 1 y 2
 Ethernet (IEEE 802.3) es el estándar dominante en LAN y trabaja en dos capas: en la capa 1 define medios y señalización, y en la capa 2 define las tramas y las direcciones MAC
 
 ### Envenenamiento ARP (ARP poisoning)
